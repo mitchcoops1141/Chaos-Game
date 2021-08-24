@@ -45,8 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ec03b4c0e13d340b87062f67ef6ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firerate: 12
-  damage: 3
+  M4Weapon:
+    position: {x: 0.035, y: -0.25, z: 0}
+    rotation: {x: -298, y: 76, z: 170}
+    weapontype: 1
+    firerate: 6
+    damage: 3
+    critDamage: 2
+    critChance: 5
   muzzleFlash: {fileID: 3540066437602333961, guid: 6fd30d6ab4309a5479a7323a6203ca02, type: 3}
   muzzleFlashLocation: {fileID: 4686263961207340831}
   hitFlash: {fileID: 3540066437602333961, guid: 9977d8eb3ef08a54285a96370502a286, type: 3}

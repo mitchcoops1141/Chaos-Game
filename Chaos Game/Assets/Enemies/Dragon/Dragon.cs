@@ -25,7 +25,7 @@ public class Dragon : MonoBehaviour, Enemy
 
     int[] tests;
 
-    void Enemy.TakeDamage(float dmg)
+    void Enemy.TakeDamage(float dmg, bool isCrit)
     {
 
         health -= dmg;

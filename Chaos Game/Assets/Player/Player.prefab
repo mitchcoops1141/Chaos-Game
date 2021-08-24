@@ -2726,6 +2726,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8882962678121748915}
+  - {fileID: 2050787132250455765}
   m_Father: {fileID: 3101596068626012180}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -298, y: 76, z: 170}
@@ -2785,7 +2786,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   weaponOne: {fileID: 8882962678121748912}
-  weaponTwo: {fileID: 0}
+  weaponTwo: {fileID: 3897069613244808264}
   meshes:
   - {fileID: 3101596068637608278}
   - {fileID: 3101596068637608276}
@@ -2839,6 +2840,73 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &1428293817928927764
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4201413441947019525}
+    m_Modifications:
+    - target: {fileID: 1128026014626133185, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128026014626133185, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128026014626133185, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128026014626133185, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128026014626133185, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128026014626133185, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128026014626133185, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128026014626133185, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128026014626133185, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128026014626133185, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128026014626133185, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722282499733894748, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+      propertyPath: m_Name
+      value: HolySword
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+--- !u!4 &2050787132250455765 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1128026014626133185, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+  m_PrefabInstance: {fileID: 1428293817928927764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3897069613244808264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2722282499733894748, guid: ab89af63c74fa3d43b8b09b4df28d56f, type: 3}
+  m_PrefabInstance: {fileID: 1428293817928927764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4201413440910333069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2896,7 +2964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4686263960788061503, guid: 92e4f14806109e84ab47ed4b7833cdf8, type: 3}
       propertyPath: damage
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4686263960788061503, guid: 92e4f14806109e84ab47ed4b7833cdf8, type: 3}
       propertyPath: firerate

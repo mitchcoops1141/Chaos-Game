@@ -221,16 +221,24 @@ public class Golem : MonoBehaviour, Enemy
     }
 
     bool canGoRed = true;
-    void Enemy.TakeDamage(float dmg)
+    void Enemy.TakeDamage(float dmg, bool isCrit)
     {
         if (canFunction)
         {
+            if (state == States.Wandering)
+                state = States.Agro;
+
             if (state == States.Blocking)
                 dmg /= 2;
 
             health -= dmg;
 
             billboard.UpdateHealthBarValue(health);
+
+            if (isCrit)
+                billboard.SpawnDamageNumber(dmg.ToString(), true);
+            else
+                billboard.SpawnDamageNumber(dmg.ToString(), false);
 
             if (canGoRed)
                 StartCoroutine("Hurt");

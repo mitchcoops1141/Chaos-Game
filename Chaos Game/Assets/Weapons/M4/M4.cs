@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class M4 : MonoBehaviour, Weapon
 {
-
     [Header("Stats")]
-    [SerializeField] [Tooltip("Amount of bullets per second")] private float firerate;
-    [SerializeField] private float damage;
+    [SerializeField] WeaponClass M4Weapon;
     
     [Header("Connections")]
     [SerializeField] private GameObject muzzleFlash;
@@ -16,13 +14,13 @@ public class M4 : MonoBehaviour, Weapon
     [SerializeField] private LayerMask layersToHit;
 
     bool canShoot = true;
-    void Weapon.PrimarySkill()
+    void Weapon.PrimarySkill(Animator anim)
     {
         if (canShoot)
             StartCoroutine("ShootIE");
     }
 
-    void Weapon.SecondarySkill()
+    void Weapon.SecondarySkill(Animator anim)
     {
         print("Do Secondary Skill STUFFFFFFF");
     }
@@ -57,8 +55,11 @@ public class M4 : MonoBehaviour, Weapon
                 Enemy enemy = hit.collider.GetComponent<Enemy>();
                 if (enemy != null)
                 {
-                    
-                    enemy.TakeDamage(damage);
+                    if (M4Weapon.IsCrit())
+                        enemy.TakeDamage(M4Weapon.GetDamage() * M4Weapon.GetCritDamage(), true);
+                    else
+                        enemy.TakeDamage(M4Weapon.GetDamage(), false);
+
                 }
             }
         }
@@ -67,8 +68,20 @@ public class M4 : MonoBehaviour, Weapon
 
 
         //firerate wait time
-        yield return new WaitForSeconds(1 / firerate);
+        yield return new WaitForSeconds(1 / M4Weapon.GetFireRate());
 
         canShoot = true;
+    }
+
+
+    WeaponType Weapon.GetWeaponType()
+    {
+        return M4Weapon.GetWeaponType();
+    }
+
+    void Weapon.SetLocation()
+    {
+        transform.parent.localPosition = M4Weapon.GetPosition();
+        transform.parent.localEulerAngles = M4Weapon.GetRotation();
     }
 }

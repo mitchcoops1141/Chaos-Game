@@ -4,7 +4,11 @@ using UnityEngine;
 
 public interface Weapon
 {
-    void PrimarySkill();
+    void PrimarySkill(Animator anim);
 
-    void SecondarySkill();
+    void SecondarySkill(Animator anim);
+
+    WeaponType GetWeaponType();
+
+    void SetLocation();
 }
